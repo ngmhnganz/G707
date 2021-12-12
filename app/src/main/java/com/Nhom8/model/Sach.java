@@ -4,7 +4,7 @@ public class Sach {
     private int id;
     private String name;
     private String nhaSanXuat;
-    private int taiBan;
+    private long taiBan;
     private double gia;
     private byte[] anh;
 
@@ -41,11 +41,11 @@ public class Sach {
         this.nhaSanXuat = nhaSanXuat;
     }
 
-    public int getTaiBan() {
+    public long getTaiBan() {
         return taiBan;
     }
 
-    public void setTaiBan(int taiBan) {
+    public void setTaiBan(long taiBan) {
         this.taiBan = taiBan;
     }
 
