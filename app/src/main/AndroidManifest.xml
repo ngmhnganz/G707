@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.G707">
         <activity
+            android:name=".chiTietSach_main"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

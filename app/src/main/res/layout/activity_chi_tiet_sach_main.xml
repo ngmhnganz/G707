@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chiTietSach_main"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tin Sách"
+        android:textSize="25sp"
+        android:gravity="center"/>
+    //Add name
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên Sách:"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên Sách"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+    //Add ma sach
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã Sách:"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/txtMaSach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mã Sách"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+    //Add NXB
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhà Xuất Bản:"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/txtNXB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên Nhà XB"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+    //Add So lan tai ban
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số lần tái bản: "
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/txtSoLanTB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="n lần"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+    //Add Gia
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá: "
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/txtGia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50000đ"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imvBia"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_launcher_background" />
+
+
+</LinearLayout>
