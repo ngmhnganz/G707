@@ -11,4 +11,5 @@ public class chiTietSach_main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chi_tiet_sach_main);
     }
+
 }
