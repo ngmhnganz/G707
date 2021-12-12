@@ -8,7 +8,7 @@ public class Sach {
     private double gia;
     private byte[] anh;
 
-    public Sach(int id, String name, String nhaSanXuat, int taiBan, double gia, byte[] anh) {
+    public Sach(int id, String name, String nhaSanXuat, long taiBan, double gia, byte[] anh) {
         this.id = id;
         this.name = name;
         this.nhaSanXuat = nhaSanXuat;
