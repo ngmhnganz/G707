@@ -189,7 +189,6 @@ public class MainActivity extends AppCompatActivity {
         btnHuy = dialog.findViewById(R.id.btnHuy);
         itemimg = dialog.findViewById(R.id.imvItem);
 
-
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
