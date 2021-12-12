@@ -1,13 +1,16 @@
 package com.Nhom8.g702;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.Nhom8.adapter.SachAdapter;
@@ -46,7 +49,81 @@ public class MainActivity extends AppCompatActivity {
         linkViews();
         initData();
         initAdapter();
+        addEvent();
 
+    }
+
+    private void addEvent() {
+        lvSach.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Sach sach = sachList.get(position);
+                openEditDialog(sach);
+                return false;
+            }
+        });
+    }
+
+    private void openEditDialog(Sach sach) {
+        Dialog dialog=new Dialog(this);
+        dialog.setContentView(R.layout.dialogadd);
+
+        EditText  edtName,
+                edtNXB,
+                edtSLTB,
+                edtGia;
+        Button btnOk,
+                btnHuy;
+        ImageView itemimg;
+        edtName = dialog.findViewById(R.id.edtGia);
+        edtNXB = dialog.findViewById(R.id.edtNXB);
+        edtSLTB = dialog.findViewById(R.id.edtSLTB);
+        edtGia = dialog.findViewById(R.id.edtGia);
+        btnOk = dialog.findViewById(R.id.btnOk);
+        btnHuy = dialog.findViewById(R.id.btnHuy);
+        itemimg = dialog.findViewById(R.id.imvItem);
+
+        edtName.setText(sach.getName());
+        edtNXB.setText(sach.getNhaSanXuat());
+        edtSLTB.setText(sach.getTaiBan()+"");
+        edtGia.setText(sach.getGia()+"");
+        byte[] photo = sach.getAnh();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(photo, 0, photo.length);
+        itemimg.setImageBitmap(bitmap);
+
+        btnOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String taskName=edtName.getText().toString();
+                if(taskName.equals("")){
+                    Toast.makeText(MainActivity.this, "Nhập tên", Toast.LENGTH_SHORT).show();
+                }else if(edtNXB.getText().toString().equals("")){
+                    Toast.makeText(MainActivity.this, "Nhập nhà sản xuất", Toast.LENGTH_SHORT).show();}
+                else if(edtSLTB.getText().toString().equals("")){
+                    Toast.makeText(MainActivity.this, "Nhập số lượng", Toast.LENGTH_SHORT).show();}
+                else if(edtGia.getText().toString().equals("")){
+                    Toast.makeText(MainActivity.this, "Nhập giá", Toast.LENGTH_SHORT).show();}
+                else {
+                    long stl = Long.parseLong(edtSLTB.getText().toString());
+                    double gia = Double.parseDouble(edtGia.getText().toString());
+                    boolean flag = db.insertData(edtName.getText().toString(), edtNXB.getText().toString(), stl, gia, convertPhoto(itemimg));
+                    if (flag){
+
+                    }
+                    Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
+//                            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+//                            startActivity(intent);
+                }
+            }
+        });
+        btnHuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     private void linkViews() {
