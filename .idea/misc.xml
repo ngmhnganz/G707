@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Mobile/BH/G707/app/src/main/res/layout/dialogadd.xml" value="0.27447916666666666" />
-        <entry key="..\:/Mobile/BH/G707/app/src/main/res/layout/dialogedit.xml" value="0.25729166666666664" />
+        <entry key="..\:/M-Commerce/Projects/G707/app/src/main/res/layout/dialogadd.xml" value="0.30104166666666665" />
+        <entry key="..\:/M-Commerce/Projects/G707/app/src/main/res/layout/dialogedit.xml" value="0.30104166666666665" />
+        <entry key="..\:/M-Commerce/Projects/G707/app/src/main/res/menu/main_menu.xml" value="0.3875" />
       </map>
     </option>
   </component>
