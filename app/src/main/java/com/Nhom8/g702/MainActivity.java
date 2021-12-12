@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         sachList=new ArrayList<Sach>();
-        //sachList.add(new Sach(01,"Sách 01","NXBTre",))
+        sachList.add(new Sach(01,"Sách 01","NXBTre",1,19000));
     }
 
     private void initAdapter() {

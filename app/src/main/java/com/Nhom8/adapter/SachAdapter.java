@@ -2,6 +2,8 @@ package com.Nhom8.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,12 +60,15 @@ public class SachAdapter extends BaseAdapter {
         }
         //biding data
         Sach sach=sachList.get(i);
-        //holder.imvAnh.set
         //SET IMAGE RESOURCE
+        //holder.imvAnh.
+//        BitmapDrawable drawable= (BitmapDrawable) holder.imvAnh.getDrawable();
+//        Bitmap bitmap=drawable.getBitmap();
+//        holder.imvAnh.setImageBitmap(bitmap);
         holder.txtTen.setText(sach.getName());
-        holder.txtNXB.setText(sach.getNhaSanXuat());
+        holder.txtNXB.setText("Nhà xuất bản: "+sach.getNhaSanXuat());
         holder.txtGia.setText(String.valueOf(sach.getGia()));
-        holder.txtSoLanTB.setText(String.valueOf(sach.getTaiBan()));
+        holder.txtSoLanTB.setText("Số lần tái bản: "+sach.getTaiBan());
 
 
         return view;
